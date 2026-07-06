@@ -62,6 +62,16 @@ Change Log
     can revisit this when real CSI ingestion is needed.
   - Added Compose !override tags so local ports replace the base compose port
     list instead of merging with it.
+- Docker/WSL test cleanup after user uninstalled Docker:
+  - Uninstalled the Microsoft WSL 2.7.10 package that had been installed to
+    repair Docker Desktop startup.
+  - Removed the downloaded WSL MSI from the Codex work directory.
+  - Removed leftover Docker user config folders:
+    C:\Users\ryuga\AppData\Local\Docker,
+    C:\Users\ryuga\AppData\Roaming\Docker, and C:\Users\ryuga\.docker.
+  - Verified Docker CLI is no longer on PATH and WSL reports "not installed".
+  - Kept repo source additions (AGENT_CONTEXT.txt, local compose override, and
+    PowerShell demo launcher) as requested.
 
 Next Session Checklist
 ----------------------
