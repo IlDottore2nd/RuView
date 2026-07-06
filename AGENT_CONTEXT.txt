@@ -1,0 +1,43 @@
+RuView Agent Context
+====================
+
+Purpose
+-------
+This file is the persistent memory for Codex work on this project. At the start
+of future sessions, read this file before making changes. Whenever important
+project information changes, update this file in the same commit or work step.
+
+Update Rules
+------------
+- Add notes for important setup steps, code/config changes, removals, tests,
+  failures, blockers, and decisions.
+- Include the reason for each meaningful change, not just the file name.
+- Keep entries concise and useful for a future Codex session after context
+  compaction.
+- Preserve older entries unless they are clearly wrong; append corrections
+  instead of erasing history.
+
+Repository Setup
+----------------
+- Local path: C:\Users\ryuga\OneDrive\Documents\Projetos\RuView
+- Fork/origin: https://github.com/IlDottore2nd/RuView.git
+- Upstream: https://github.com/ruvnet/RuView.git
+- Default branch: main
+- Fork was created from ruvnet/RuView via the GitHub web UI.
+- Local checkout was cloned from the fork, then the upstream remote was added.
+
+Change Log
+----------
+2026-07-06
+- Created this AGENT_CONTEXT.txt file so future Codex sessions can recover
+  project state after token/context compaction.
+- Confirmed target project path was empty before cloning.
+- Cloned IlDottore2nd/RuView into the target project path.
+- Added upstream remote pointing to ruvnet/RuView for future syncs.
+
+Next Session Checklist
+----------------------
+1. Read this file first.
+2. Run git status --short --branch.
+3. Check git remote -v if repository sync or push behavior matters.
+4. After meaningful work, update this file before committing or reporting done.
