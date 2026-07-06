@@ -42,8 +42,8 @@ if ($Detached) {
 $composeArgs += "sensing-server"
 
 Write-Host "Starting RuView Docker demo with simulated data..."
-Write-Host "UI:  http://localhost:3000/ui/index.html"
-Write-Host "API: http://localhost:3000/health"
+Write-Host "UI:  http://localhost:3300/ui/index.html"
+Write-Host "API: http://localhost:3300/health"
 Write-Host ""
 
 & docker @composeArgs

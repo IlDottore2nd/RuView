@@ -48,6 +48,20 @@ Change Log
     to leave containers running in the background.
   - Docker CLI and winget were not available on PATH on this machine, so Docker
     Desktop still needs to be installed or added to PATH before running the demo.
+- Repaired Docker Desktop startup blocker:
+  - Docker Desktop showed "WSL needs updating"; wsl --update failed with
+    Wsl/CallMsi/Install/REGDB_E_CLASSNOTREG.
+  - Downloaded and installed Microsoft WSL 2.7.10 x64 MSI from the official
+    microsoft/WSL GitHub release.
+  - Restarted WSL and Docker Desktop; docker info now reports engine 29.6.1.
+  - First RuView compose start failed because host port 3000 was unavailable.
+    Changed the local Docker demo host ports to 3300/3301 while keeping
+    container ports 3000/3001.
+  - Host UDP port 5005 was also unavailable during simulated Docker startup.
+    Changed the local host UDP mapping to 5505:5005/udp; ESP32 hardware runs
+    can revisit this when real CSI ingestion is needed.
+  - Added Compose !override tags so local ports replace the base compose port
+    list instead of merging with it.
 
 Next Session Checklist
 ----------------------

@@ -1,9 +1,9 @@
 services:
   sensing-server:
-    ports:
-      - "127.0.0.1:3000:3000"
-      - "127.0.0.1:3001:3001"
-      - "127.0.0.1:5005:5005/udp"
+    ports: !override
+      - "127.0.0.1:3300:3000"
+      - "127.0.0.1:3301:3001"
+      - "127.0.0.1:5505:5005/udp"
     environment:
       - CSI_SOURCE=simulated
       - RUST_LOG=info
@@ -12,6 +12,6 @@ services:
   python-sensing:
     profiles:
       - legacy-python
-    ports:
+    ports: !override
       - "127.0.0.1:8765:8765"
       - "127.0.0.1:8080:8080"
