@@ -43,6 +43,9 @@ Change Log
   - Added docker/docker-compose.local.yml for local simulated Docker runs.
     It binds host ports to 127.0.0.1, sets CSI_SOURCE=simulated, and keeps
     the legacy Python sensing service behind the legacy-python profile.
+  - Added scripts/start-docker-demo.ps1 as the Windows-friendly launcher for
+    the local compose files. Use -Build for a local image build and -Detached
+    to leave containers running in the background.
   - Docker CLI and winget were not available on PATH on this machine, so Docker
     Desktop still needs to be installed or added to PATH before running the demo.
 
