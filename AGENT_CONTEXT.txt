@@ -34,6 +34,9 @@ Change Log
 - Confirmed target project path was empty before cloning.
 - Cloned IlDottore2nd/RuView into the target project path.
 - Added upstream remote pointing to ruvnet/RuView for future syncs.
+- Set repo-local Git author identity:
+  IlDottore2nd <143614564+IlDottore2nd@users.noreply.github.com>.
+- Committed and pushed the initial context file to origin/main.
 
 Next Session Checklist
 ----------------------
