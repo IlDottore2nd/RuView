@@ -37,6 +37,14 @@ Change Log
 - Set repo-local Git author identity:
   IlDottore2nd <143614564+IlDottore2nd@users.noreply.github.com>.
 - Committed and pushed the initial context file to origin/main.
+- Prepared Docker setup:
+  - Initialized and pinned all Git submodules with
+    git submodule update --init --recursive --checkout --force.
+  - Added docker/docker-compose.local.yml for local simulated Docker runs.
+    It binds host ports to 127.0.0.1, sets CSI_SOURCE=simulated, and keeps
+    the legacy Python sensing service behind the legacy-python profile.
+  - Docker CLI and winget were not available on PATH on this machine, so Docker
+    Desktop still needs to be installed or added to PATH before running the demo.
 
 Next Session Checklist
 ----------------------

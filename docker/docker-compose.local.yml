@@ -1,0 +1,17 @@
+services:
+  sensing-server:
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3001:3001"
+      - "127.0.0.1:5005:5005/udp"
+    environment:
+      - CSI_SOURCE=simulated
+      - RUST_LOG=info
+      - RUVIEW_ALLOW_UNAUTHENTICATED=1
+
+  python-sensing:
+    profiles:
+      - legacy-python
+    ports:
+      - "127.0.0.1:8765:8765"
+      - "127.0.0.1:8080:8080"
